@@ -1,4 +1,3 @@
-const testVar = {
-	val: 1,
-		true: 23
-}
+import process from 'process';
+
+process.exit(0);
