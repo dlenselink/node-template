@@ -1,25 +1,25 @@
 {
-  "name": "cli-readme-generator",
+  "name": "node-template",
   "version": "0.0.1-alpha",
   "description": "A command-line utility that programmatically generates a README file.",
+	"type": "module",
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
     "lint": "eslint --ext .js src/",
     "format": "prettier --write src/",
-    "check": "npm run lint && npm run format",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "check": "npm run lint && npm run format"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dlenselink/cli-readme-generator.git"
+    "url": "git+https://github.com/dlenselink/node-template.git"
   },
   "author": "Danny Lenselink",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dlenselink/cli-readme-generator/issues"
+    "url": "https://github.com/dlenselink/node-template/issues"
   },
-  "homepage": "https://github.com/dlenselink/cli-readme-generator#readme",
+  "homepage": "https://github.com/dlenselink/node-template#readme",
   "devDependencies": {
     "eslint": "^8.13.0",
     "eslint-config-prettier": "^8.5.0",

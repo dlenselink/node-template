@@ -1,1 +1,4 @@
-process.exit(0);
+const testVar = {
+	val: 1,
+		true: 23
+}
