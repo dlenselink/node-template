@@ -7,6 +7,7 @@
   "scripts": {
     "start": "node src/index.js",
     "prepare": "husky install",
+    "setup": "npm install -g npx && npx npm-check-updates -u && npm i",
     "lint": "eslint --ext .js src/",
     "format": "prettier --write src/",
     "check": "npm run lint && npm run format"
