@@ -8,12 +8,6 @@ Before attempting to set up the project for the first time, ensure that you have
 
 - [ ] [NodeJS](https://nodejs.org/en/) - **[Install NodeJS here](https://nodejs.org/en/)** for all operating systems.
 
-- [ ] [npx](https://www.npmjs.com/package/npx) - Install **npx** with the following command:
-
-```bash
-npm install -g npx
-```
-
 ## First Time Setup
 
 ### 1) Run the `setup` command
@@ -26,11 +20,11 @@ npm run setup
 
 ### 2) Set the `Prettier` config file location
 
-**In the vscode explorer window, right-click the `.prettierrc.json` file and copy its file path.**
+**In the VScode explorer window, right-click the `.prettierrc.json` file and select `Copy Path`.**
 
 ![Copy prettier config path](./docs/setup-1.png)
 
-**Then, press `Ctrl/⌘` + `,` to open vscode settings, then paste in the value for the _Prettier Config Path_ value.**
+**Then, press `Ctrl/⌘` + `,` to open VScode settings. Search for `prettier config` then paste in the value for _Prettier Config Path_.**
 
 ![Update prettier config path](./docs/setup-2.png)
 
@@ -38,10 +32,14 @@ npm run setup
 
 ![Enable format on save](./docs/setup-3.png)
 
+**Still in VScode settings, search for `format on save` in the search bar and enable that setting.**
+
 ## Running the application
 
 Run `npm start` to launch a [nodemon](https://github.com/remy/nodemon) session which will run your app and watch for changes with hot reloading. The entrypoint for nodemon is `src/index.js`.
 
-## Git Commits
+## Committing via Git
 
-This project template uses [Husky](https://github.com/typicode/husky) to run a pre-commit hook before you commit. This helps prevent bad code from polluting the repository. It runs ESLint and Prettier; if either of those fail, the commit is aborted. Feel free to add automated testing to this pre-commit hook as well!
+This project template uses [Husky](https://github.com/typicode/husky) to run a pre-commit hook which uses the [lint-staged](https://github.com/okonet/lint-staged) package to lint and format only the staged files as defined in `.lintstagedrc.json`. This helps prevent bad code from polluting the repository.
+
+As your project grows, please edit the Husky & lint-staged configurations to include automated testing or any other additional pre/post commit logic you might come to need.
