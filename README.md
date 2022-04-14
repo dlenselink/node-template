@@ -16,40 +16,32 @@ npm install -g npx
 
 ## First Time Setup
 
-### 1) Update dev dependencies
+### 1) Run the `setup` command
 
-**Open a terminal with this project as the working directory. Then, run the following command and follow the instructions in any ensuing prompts:**
-
-```bash
-npx npm-check-updates
-```
-
-### 2) Install all dependencies
-
-**In that same terminal (or any terminal with this project as the current working directory), run the following command:**
+**In a terminal with this project as the current working directory, run the following command:**
 
 ```bash
-npm i
+npm run setup
 ```
 
-**This will download and install the node_modules dependencies for the few dev dependencies this template uses.**
-
-### 3) Copy `Prettier` config
+### 2) Set the `Prettier` config file location
 
 **In the vscode explorer window, right-click the `.prettierrc.json` file and copy its file path.**
 
 ![Copy prettier config path](./docs/setup-1.png)
 
-### 4) Update `Prettier` config
-
-**Press `Ctrl/⌘` + `,` to open vscode settings, then paste in the value for the _Prettier Config Path_ value.**
+**Then, press `Ctrl/⌘` + `,` to open vscode settings, then paste in the value for the _Prettier Config Path_ value.**
 
 ![Update prettier config path](./docs/setup-2.png)
 
-### 5)
-
-**Enable the _Format on Save_ setting for Prettier.**
+### 3) Enable the _Format on Save_ setting for Prettier
 
 ![Enable format on save](./docs/setup-3.png)
 
-**You are now ready to run the app! Use the `npm start` command to execute the contents of `src/index.js`.**
+## Running the application
+
+Run `npm start` to launch a [nodemon](https://github.com/remy/nodemon) session which will run your app and watch for changes with hot reloading. The entrypoint for nodemon is `src/index.js`.
+
+## Git Commits
+
+This project template uses [Husky](https://github.com/typicode/husky) to run a pre-commit hook before you commit. This helps prevent bad code from polluting the repository. It runs ESLint and Prettier; if either of those fail, the commit is aborted. Feel free to add automated testing to this pre-commit hook as well!
