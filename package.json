@@ -3,7 +3,6 @@
   "version": "0.0.1-alpha",
   "description": "A command-line utility that programmatically generates a README file.",
   "type": "module",
-  "private": true,
   "main": "src/index.js",
   "scripts": {
     "start": "nodemon --watch src --ext 'js,mjs,json,ts' src/index.js",
