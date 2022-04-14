@@ -8,7 +8,7 @@
     "start": "nodemon --watch src --ext 'js,mjs,json,ts' src/index.js",
     "prepare": "husky install",
     "setup": "npm i -g npx && npm i -g nodemon && npx npm-check-updates -u && npm i",
-    "lint": "eslint --ext .js src/",
+    "lint": "eslint --fix --ext .js src/",
     "format": "prettier --write src/",
     "check": "npm run lint && npm run format"
   },
